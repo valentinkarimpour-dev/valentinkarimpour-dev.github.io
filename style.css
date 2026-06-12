@@ -280,7 +280,7 @@ button {
    ABOUT ME — EXPERIENCE SQUARES
    ============================================================ */
 .xp-section {
-  padding: 0 var(--pad-x) var(--s8);
+  padding: 0 var(--pad-x) 0;
   max-width: calc(var(--max-w) + 2 * var(--pad-x));
   margin: 0 auto;
 }
@@ -322,6 +322,14 @@ button {
 
 [data-theme="dark"] .xp-item:hover .xp-img-wrap {
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="dark"] .xp-img-wrap {
+  background: #ffffff;
+}
+
+[data-theme="dark"] .xp-logo {
+  filter: invert(1);
 }
 
 .xp-logo {
@@ -439,8 +447,12 @@ button {
   display: flex;
   align-items: center;
   margin-bottom: var(--s8);
-  padding-bottom: var(--s4);
-  border-bottom: 1px solid var(--border);
+  padding-top: var(--s3);
+  padding-bottom: var(--s3);
+  background: #000000;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-inline: calc(50vw - 50% + var(--pad-x));
 }
 
 .section-label {
@@ -448,7 +460,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: var(--fg-muted);
+  color: #ddb87a;
 }
 
 
@@ -793,6 +805,20 @@ button {
   background: #000;
 }
 
+.xp-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--s2);
+}
+
+.xp-media-item {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+}
+
 .modal-content {
   padding: var(--s6) var(--s7) var(--s9);
   display: flex;
@@ -814,6 +840,15 @@ button {
   font-weight: 400;
   line-height: 1.18;
   color: var(--fg);
+}
+
+.modal-title-sm {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.4;
+}
+
+.modal-title-center {
+  text-align: center;
 }
 
 .modal-summary {
@@ -1025,6 +1060,43 @@ button {
 /* ============================================================
    ABOUT SECTION
    ============================================================ */
+.bio-section {
+  padding: var(--s8) var(--pad-x);
+  max-width: calc(var(--max-w) + 2 * var(--pad-x));
+  margin: 0 auto;
+}
+
+.bio-inner {
+  max-width: var(--max-w);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s5);
+}
+
+.bio-greeting {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 400;
+  line-height: 1.18;
+  color: #ddb87a;
+  background: #000000;
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
+  padding-block: var(--s4);
+  padding-inline: calc(50vw - 50% + var(--pad-x));
+}
+
+.bio-inner p {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  line-height: 1.75;
+  color: var(--fg-muted);
+  text-align: justify;
+}
+
+[data-theme="dark"] .bio-inner p {
+  color: var(--fg);
+}
+
 .about-section {
   padding: var(--s10) var(--pad-x);
   max-width: calc(var(--max-w) + 2 * var(--pad-x));

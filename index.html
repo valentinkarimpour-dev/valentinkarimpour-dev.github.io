@@ -41,9 +41,6 @@
       <div class="hero-inner">
         <span class="hero-eyebrow anim-fadeup anim-d1">Paris, France</span>
         <h1 class="hero-name anim-fadeup anim-d2">Valentin</h1>
-        <div class="hero-sub anim-fadeup anim-d3">
-          <span class="hero-role">Data&thinsp;|&thinsp;Analytics&thinsp;|&thinsp;Strategy&thinsp;|&thinsp;Operations&emsp;||&emsp;Essec&thinsp;|&thinsp;Le Wagon&emsp;||&emsp;Paris&thinsp;|&thinsp;Amsterdam</span>
-        </div>
       </div>
       <div class="hero-scroll-hint" aria-hidden="true">↓</div>
     </section>
@@ -99,6 +96,15 @@
       </div>
     </section>
 
+    <section class="bio-section" aria-label="Bio">
+      <div class="bio-inner">
+        <h2 class="bio-greeting">Hi, I am Valentin!</h2>
+        <p>I have spent the last 7 years working at the intersection of data and operations, in both Paris and Amsterdam, always with one consistent thread: building processes and tools that allow teams to scale without losing quality or execution speed. I am driven by continuous learning and bringing clarity into chaotic organizations.</p>
+        <p>I hold a Master's degree from Essec Business School in Management and Business Administration (E19), and have completed Le Wagon Advanced Data Science &amp; AI bootcamp (#2195) in 2026, studying across Paris, Singapore and Seoul.</p>
+        <p>I am a sports enthusiast, optimizing my health through nutrition, movement and meditation, and an aspiring stand-up comedian! Let's chat!</p>
+      </div>
+    </section>
+
     <section class="work-section" id="work" aria-label="Selected work">
       <header class="section-header">
         <span class="section-label">Projects Portfolio</span>
@@ -142,6 +148,24 @@
           </div>
         </article>
 
+        <!-- Card 6 — Foxintelligence Freemium -->
+        <article class="project-card card-6 anim-fadeup anim-d5" data-thumb="">
+          <div class="card-body">
+            <p class="card-meta">Foxintelligence &middot; Paris (FR)</p>
+            <h2 class="card-title">Launching Foxintelligence's freemium model <em>(and growing new user acquisition by 40%)</em></h2>
+            <button class="card-link" data-modal="modal-fox-freemium">View project <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
+        <!-- Card 7 — Nike Analytics Intake -->
+        <article class="project-card card-7 anim-fadeup anim-d5" data-thumb="">
+          <div class="card-body">
+            <p class="card-meta">Nike EHQ &middot; Amsterdam (NL)</p>
+            <h2 class="card-title">Rebuilding Nike's analytics intake process <em>(and increasing team's project delivery rate +20%)</em></h2>
+            <button class="card-link" data-modal="modal-nike-intake">View project <span aria-hidden="true">→</span></button>
+          </div>
+        </article>
+
         <!-- Card 5 — Le Wagon / Pixel Truth -->
         <article class="project-card card-small card-5 anim-fadeup anim-d5">
           <div class="card-body">
@@ -162,23 +186,6 @@
     </section>
 
   </main>
-
-    <section class="about-section" id="about" aria-label="About">
-      <div class="about-inner">
-        <header class="section-header">
-          <span class="section-label">About</span>
-        </header>
-        <div class="about-content">
-          <h2 class="about-greeting">Hi, I am Valentin!</h2>
-          <div class="about-body">
-            <p>I have spent the last 7 years working at the intersection of data and operations, in both Paris and Amsterdam, always with one consistent thread: building processes and tools that allow teams to scale without losing quality or execution speed. I am driven by continuous learning and bringing clarity into chaotic organizations.</p>
-            <p>I hold a Master's degree from Essec Business School in Management and Business Administration (E19), and have completed Le Wagon Advanced Data Science &amp; AI bootcamp (#2195) in 2026, studying across Paris, Singapore and Seoul.</p>
-            <p>I am a sports enthusiast, optimizing my health through nutrition, movement and meditation, and an aspiring stand-up comedian!</p>
-          </div>
-          <a href="mailto:#" class="about-cta">Let's chat <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
 
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
@@ -818,6 +825,217 @@ pip install -e .</code></pre>
     </div>
   </div>
 
+  <!-- ============================================================
+       PROJECT MODAL — Foxintelligence Freemium
+       ============================================================ -->
+  <div class="project-modal" id="modal-fox-freemium" role="dialog" aria-modal="true" aria-labelledby="modal-fox-freemium-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close project">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="modal-image">
+        <img class="modal-hero-img" src="" alt="" hidden />
+      </div>
+
+      <div class="modal-content">
+        <p class="modal-meta">Foxintelligence &middot; Paris (FR)</p>
+        <h2 class="modal-title" id="modal-fox-freemium-title">Launching Foxintelligence's freemium model <em>(and growing new user acquisition by 40%)</em></h2>
+
+        <div class="modal-divider"></div>
+
+        <div class="case-section">
+          <h4 class="case-heading">Context</h4>
+          <p>Initially, Foxintelligence's only routes to new customers were paid subscriptions and sales-led live demos, meaning top-of-funnel velocity was capped by the capacity of the sales team, and leadership wanted to increase organic inbound and reduce reliance on outbound.</p>
+          <p>As Product Lead, I was tasked with designing and shipping a freemium tier: an open, self-serve version of the platform that would attract prospects and drive conversion without requiring a sales touchpoint to get started.</p>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">Problem</h4>
+          <p>The freemium experience had to surface enough value to create genuine product desire, while withholding enough to make the paid tier worth converting to.</p>
+          <p class="case-italic">Get it wrong in either direction and the model fails.</p>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">What I built</h4>
+          <dl class="case-list">
+
+            <div class="case-list-item">
+              <dt>On the product side: defined the freemium experience</dt>
+              <ul class="case-bullets">
+                <li>Which analyses and filters were accessible.</li>
+                <li>What data scope was available.</li>
+                <li>What remained locked to surface the value of the paid tier without giving it away.</li>
+              </ul>
+            </div>
+
+            <div class="case-list-item">
+              <dt>On the conversion side: designed a lead capture flow</dt>
+              <ul class="case-bullets">
+                <li>Collecting name, company, function, and email at signup.</li>
+                <li>Added a request-a-demo CTA to route warm leads directly into the sales pipeline.</li>
+              </ul>
+            </div>
+
+            <div class="case-list-item">
+              <dt>On the data side: worked with engineering to build new routes</dt>
+              <ul class="case-bullets">
+                <li>Real-time pipelines and Slack alerts notifying sales reps the moment a prospect company signed up.</li>
+                <li>Automatic CRM updates triggered.</li>
+              </ul>
+            </div>
+
+          </dl>
+          <p class="case-italic">The full model followed a classic Acquisition &rarr; Activation &rarr; Conversion funnel logic.</p>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">Results</h4>
+          <ul class="case-bullets">
+            <li>+40% new signups growth within the first three months of launch.</li>
+            <li>+25% sales-qualified leads.</li>
+            <li>10% freemium-to-paid conversion rate.</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">What I learned</h4>
+          <p>Freemium is as much a sales tool as a product decision, and the most important design choices were about information architecture and lead routing.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PROJECT MODAL — Nike Analytics Intake
+       ============================================================ -->
+  <div class="project-modal" id="modal-nike-intake" role="dialog" aria-modal="true" aria-labelledby="modal-nike-intake-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close project">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="modal-image">
+        <img class="modal-hero-img" src="" alt="" hidden />
+      </div>
+
+      <div class="modal-content">
+        <p class="modal-meta">Nike EHQ &middot; Amsterdam (NL)</p>
+        <h2 class="modal-title" id="modal-nike-intake-title">Rebuilding Nike's analytics intake process <em>(and increasing team's project delivery rate +20%)</em></h2>
+
+        <div class="modal-divider"></div>
+
+        <div class="case-section">
+          <h4 class="case-heading">Context</h4>
+          <p>Joining Nike's Digital Commerce Analytics team, requests came from everywhere: Slack, email, direct messages, hallway conversations, with no filter, structure or shared understanding of capacity.</p>
+          <p>The team was constantly over-committed, under-delivering, and slowly losing credibility.</p>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">Problem</h4>
+          <p>There was no structured cadence for qualifying incoming requests, no shared visibility on who was working on what, and no defensible mechanism for prioritization. The team could not say no, not because the work was unimportant, but because there was no framework to make the decision legible to anyone outside the team.</p>
+          <p class="case-italic">The goal was to build a process that let the team honour its commitments, and decline requests without it feeling personal.</p>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">What I built</h4>
+          <dl class="case-list">
+
+            <div class="case-list-item">
+              <dt>Quarterly intake process aligned with Nike's seasonal cadence</dt>
+              <ul class="case-bullets">
+                <li>Teams logged projects the quarter before.</li>
+                <li>Collective leadership review three weeks before the start of each quarter to prioritize the full slate.</li>
+                <li>Projects dispatched based on analyst skills, project complexity, and individual preference.</li>
+                <li>20% buffer reserved for genuine ad-hoc requests.</li>
+              </ul>
+            </div>
+
+            <div class="case-list-item">
+              <dt>Pre-quarter scoping with each stakeholder</dt>
+              <ul class="case-bullets">
+                <li>Timelines, deliverables, and shareout dates defined before the quarter began.</li>
+                <li>Once locked, the perimeter moved only for rare, leadership-validated exceptions.</li>
+              </ul>
+            </div>
+
+            <div class="case-list-item">
+              <dt>Transparency as the keystone</dt>
+              <ul class="case-bullets">
+                <li>Every project in flight visible to any stakeholder at any time.</li>
+                <li>Workload needed no justification, it was on display.</li>
+                <li>Bypass requests discussed against already-aligned and visible priorities. No arbitrariness, no perception of bad faith.</li>
+              </ul>
+            </div>
+
+            <div class="case-list-item">
+              <dt>Managing out-of-process requests</dt>
+              <ul class="case-bullets">
+                <li>Buffer absorbed quick asks while full analyses waited for the next quarter, subject to leadership-validated priority.</li>
+                <li>Strict one-in-one-out logic for genuine emergencies. New project replaced an existing one or consumed the analyst's buffer entirely.</li>
+                <li>Team capacity was full. That logic was non-negotiable, and the process made it defensible to any stakeholder.</li>
+              </ul>
+            </div>
+
+          </dl>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">Results</h4>
+          <ul class="case-bullets">
+            <li>+20% team project delivery rate, owing to better resource allocation and significantly less dispersion.</li>
+            <li>Trust restored, with stakeholders knowing what to expect, and when.</li>
+            <li>Saying no became structural rather than personal: the process carried the decision, so no individual had to.</li>
+          </ul>
+        </div>
+
+        <div class="case-section">
+          <h4 class="case-heading">What I learned</h4>
+          <p>Capacity problems are rarely capacity problems. They are visibility problems. The team was not under-resourced — it was under-structured. Once every stakeholder could see the full picture, the dynamic shifted: requests became negotiations rather than demands, and the team's workload became a shared constraint rather than a black box to push against.</p>
+        </div>
+
+        <div class="modal-divider"></div>
+
+        <div class="case-section">
+          <h4 class="case-heading">What made this possible: a pattern learned at Foxintelligence</h4>
+          <p>The intake process at Nike was not built from scratch. It was grounded in a dynamic I had already navigated as Data Product Lead at Foxintelligence, where sales teams regularly pushed features requested by their prospects during sprint prioritization, bypassing the roadmap and pressuring the product team directly.</p>
+          <p>At Foxintelligence, every request was evaluated against three questions:</p>
+          <dl class="case-list">
+            <div class="case-list-item">
+              <dt>1 — Company's strategic direction</dt>
+              <ul class="case-bullets">
+                <li>Where does the company want to head towards?</li>
+              </ul>
+            </div>
+            <div class="case-list-item">
+              <dt>2 — Feature value</dt>
+              <ul class="case-bullets">
+                <li>How much revenue would this feature generate, and is it replicable for other clients?</li>
+              </ul>
+            </div>
+            <div class="case-list-item">
+              <dt>3 — Efforts needed</dt>
+              <ul class="case-bullets">
+                <li>Is this feature an easy quick-win or a weeks-long product improvement?</li>
+              </ul>
+            </div>
+          </dl>
+          <p>Each was scored via RICE (Reach, Impact, Confidence, Effort) so the decision was transparent and collective. The framework decided which to prioritize, not the product manager or the sales lead.</p>
+          <p>Critically, the team maintained a public Notion ticket board with outward weekly communication on current priorities and the reasoning behind them. Stakeholders did not need to ask what was being worked on or why because the visibility was accessible to all.</p>
+          <p>The same principle translated directly to Nike: make capacity visible, make prioritization legible, and the conversation shifts from push-and-resist to shared constraint.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <!-- XP modals -->
   <div class="project-modal" id="modal-xp-essec" role="dialog" aria-modal="true" aria-labelledby="modal-xp-essec-title">
     <div class="modal-backdrop"></div>
@@ -827,8 +1045,16 @@ pip install -e .</code></pre>
       </button>
       <div class="modal-content">
         <p class="modal-meta">Essec Business School &middot; Paris (FR)</p>
-        <h2 class="modal-title" id="modal-xp-essec-title">Essec Business School</h2>
+        <h2 class="modal-title modal-title-center" id="modal-xp-essec-title">Essec Business School alumnus, MSc. in Management, PGE19</h2>
         <div class="modal-divider"></div>
+        <div class="case-section">
+          <p>One of France's leading Grandes Écoles and a member of the "Trois Parisiennes" alongside HEC and ESCP, ESSEC is consistently ranked among the top business schools globally, including top 30 worldwide by QS and top 10 in the Financial Times Executive Education rankings. Admission is through a highly selective entrance exam with an acceptance rate of 6 to 7%.</p>
+        </div>
+        <div class="modal-divider"></div>
+        <div class="xp-media-grid">
+          <img src="img/essec-diploma-1.jpg" alt="Essec diploma" class="xp-media-item" />
+          <img src="img/essec-diploma-2.jpg" alt="Essec diploma" class="xp-media-item" />
+        </div>
       </div>
     </div>
   </div>
@@ -841,11 +1067,15 @@ pip install -e .</code></pre>
       </button>
       <div class="modal-content">
         <p class="modal-meta">Foxintelligence &middot; Paris (FR)</p>
-        <h2 class="modal-title" id="modal-xp-fox-title">Foxintelligence</h2>
+        <h2 class="modal-title modal-title-center" id="modal-xp-fox-title">Foxintelligence FTE</h2>
+        <div class="modal-divider"></div>
+        <div class="case-section">
+          <p>Foxintelligence is a French B2B SaaS company specialising in e-commerce intelligence, using anonymised consumer email data to give FMCG and retail brands visibility into online market share, purchasing behaviour, and competitive dynamics. Acquired by NielsenIQ, it serves 100+ corporate clients across Europe.</p>
+        </div>
+        <div class="modal-divider"></div>
         <video class="modal-video" controls preload="metadata">
           <source src="img/foxintelligence-video.mp4" type="video/mp4" />
         </video>
-        <div class="modal-divider"></div>
       </div>
     </div>
   </div>
@@ -858,11 +1088,21 @@ pip install -e .</code></pre>
       </button>
       <div class="modal-content">
         <p class="modal-meta">Nike EHQ &middot; Amsterdam (NL)</p>
-        <h2 class="modal-title" id="modal-xp-nike-title">Nike EHQ</h2>
+        <h2 class="modal-title modal-title-center" id="modal-xp-nike-title">Nike FTE</h2>
+        <div class="modal-divider"></div>
+        <div class="case-section">
+          <p>Nike is the world's largest sportswear company, designing and selling footwear, apparel, and equipment across 190+ countries. Nike EMEA is the company's European, Middle East and Africa regional hub, headquartered in Hilversum, driving commercial and digital strategy across 200+ retail stores and multiple digital platforms.</p>
+        </div>
+        <div class="modal-divider"></div>
         <video class="modal-video" controls preload="metadata">
           <source src="img/nike-video.mp4" type="video/mp4" />
         </video>
-        <div class="modal-divider"></div>
+        <div class="xp-media-grid">
+          <img src="img/nike-campus.jpeg" alt="Nike campus" class="xp-media-item" />
+          <img src="img/nike-haaland.jpeg" alt="Nike Haaland" class="xp-media-item" />
+          <img src="img/nike-stadium.jpeg" alt="Nike stadium" class="xp-media-item" />
+          <img src="img/nike-kipchoge.jpeg" alt="Nike Kipchoge" class="xp-media-item" />
+        </div>
       </div>
     </div>
   </div>
@@ -874,8 +1114,16 @@ pip install -e .</code></pre>
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
       <div class="modal-content">
-        <p class="modal-meta">Micro &middot; Paris (FR) &amp; Amsterdam (NL)</p>
-        <h2 class="modal-title" id="modal-xp-micro-title">Micro</h2>
+        <p class="modal-meta">Stand Up Comedian &middot; Paris (FR) &amp; Amsterdam (NL)</p>
+        <h2 class="modal-title modal-title-center" id="modal-xp-micro-title">Stand Up Comedian, Dam Qui Rit resident</h2>
+        <div class="xp-media-grid">
+          <video class="xp-media-item" controls preload="metadata">
+            <source src="img/micro-1.mp4" type="video/mp4" />
+          </video>
+          <video class="xp-media-item" controls preload="metadata">
+            <source src="img/micro-2.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="modal-divider"></div>
       </div>
     </div>
@@ -889,8 +1137,15 @@ pip install -e .</code></pre>
       </button>
       <div class="modal-content">
         <p class="modal-meta">Le Wagon &middot; Paris (FR)</p>
-        <h2 class="modal-title" id="modal-xp-lewagon-title">Le Wagon</h2>
+        <h2 class="modal-title modal-title-center" id="modal-xp-lewagon-title">Le Wagon alumnus, Data Science and AI, Batch #2195</h2>
         <div class="modal-divider"></div>
+        <div class="case-section">
+          <p>Le Wagon is a global tech and AI training provider founded in Paris in 2013, now operating in 27 cities across 20+ countries. Ranked the number one tech bootcamp worldwide, its Data Science and AI programme covers Python, machine learning, deep learning, MLOps, and ethical AI through a hands-on, project-first curriculum. Graduates leave with a production-deployed end-to-end project and a technical foundation directly applicable to data science and AI engineering roles.</p>
+        </div>
+        <div class="modal-divider"></div>
+        <div class="xp-media-grid" style="grid-template-columns: 1fr;">
+          <img src="img/lewagon-diploma.jpg" alt="Le Wagon diploma" class="xp-media-item" />
+        </div>
       </div>
     </div>
   </div>
