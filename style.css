@@ -1,4 +1,53 @@
 /* ============================================================
+   FUTURA LT FONT FACES
+   ============================================================ */
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-Light.woff2') format('woff2'), url('fonts/FuturaLT-Light.woff') format('woff');
+  font-weight: 300; font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-LightOblique.woff2') format('woff2'), url('fonts/FuturaLT-LightOblique.woff') format('woff');
+  font-weight: 300; font-style: italic;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-Book.woff2') format('woff2'), url('fonts/FuturaLT-Book.woff') format('woff');
+  font-weight: 400; font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-BookOblique.woff2') format('woff2'), url('fonts/FuturaLT-BookOblique.woff') format('woff');
+  font-weight: 400; font-style: italic;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT.woff2') format('woff2'), url('fonts/FuturaLT.woff') format('woff');
+  font-weight: 500; font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-Oblique.woff2') format('woff2'), url('fonts/FuturaLT-Oblique.woff') format('woff');
+  font-weight: 500; font-style: italic;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-Bold.woff2') format('woff2'), url('fonts/FuturaLT-Bold.woff') format('woff');
+  font-weight: 700; font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-BoldOblique.woff2') format('woff2'), url('fonts/FuturaLT-BoldOblique.woff') format('woff');
+  font-weight: 700; font-style: italic;
+}
+@font-face {
+  font-family: 'FuturaLT';
+  src: url('fonts/FuturaLT-Heavy.woff2') format('woff2'), url('fonts/FuturaLT-Heavy.woff') format('woff');
+  font-weight: 800; font-style: normal;
+}
+
+/* ============================================================
    CUSTOM PROPERTIES
    ============================================================ */
 :root {
@@ -23,8 +72,8 @@
   --ph-text-bg: #ece5d8;
 
   /* Typography */
-  --font-serif: 'DM Serif Display', Georgia, serif;
-  --font-sans:  'Syne', 'Helvetica Neue', sans-serif;
+  --font-serif: 'FuturaLT', 'Futura', sans-serif;
+  --font-sans:  'FuturaLT', 'Futura', sans-serif;
 
   /* Spacing scale */
   --s1:  0.25rem;
@@ -155,10 +204,11 @@ button {
 }
 
 .nav-logo {
-  font-family: var(--font-serif);
-  font-size: 1.65rem;
-  letter-spacing: 0.01em;
-  color: var(--nav-fg);
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.8vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #ddb87a;
   transition: opacity 0.2s;
 }
 .nav-logo:hover { opacity: 0.65; }
@@ -178,6 +228,7 @@ button {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--nav-fg); }
+.nav-links a.nav-active { color: #ddb87a; }
 
 .theme-toggle {
   display: flex;
@@ -212,13 +263,26 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: calc(var(--nav-h) + var(--s9)) var(--pad-x) var(--s5);
+  padding: var(--nav-h) 0 var(--s5);
   position: relative;
 }
 
 .hero-inner {
-  max-width: var(--max-w);
+  padding-inline: var(--pad-x);
   width: 100%;
+  padding-top: var(--s5);
+}
+
+.hero-bio .bio-inner {
+  margin-top: var(--s4);
+}
+
+.hero .section-header {
+  margin-bottom: var(--s4);
+}
+
+#about, #work {
+  scroll-margin-top: var(--nav-h);
 }
 
 .hero-eyebrow {
@@ -280,7 +344,7 @@ button {
    ABOUT ME — EXPERIENCE SQUARES
    ============================================================ */
 .xp-section {
-  padding: 0 var(--pad-x) 0;
+  padding: var(--s5) var(--pad-x) var(--s5);
   max-width: calc(var(--max-w) + 2 * var(--pad-x));
   margin: 0 auto;
 }
@@ -438,9 +502,8 @@ button {
    WORK SECTION
    ============================================================ */
 .work-section {
-  padding: var(--s6) var(--pad-x) var(--s10);
-  max-width: calc(var(--max-w) + 2 * var(--pad-x));
-  margin: 0 auto;
+  padding: 0 0 var(--s10);
+  width: 100%;
 }
 
 .section-header {
@@ -449,7 +512,7 @@ button {
   margin-bottom: var(--s8);
   padding-top: var(--s3);
   padding-bottom: var(--s3);
-  background: #000000;
+  background: #ddb87a;
   width: 100vw;
   margin-inline: calc(50% - 50vw);
   padding-inline: calc(50vw - 50% + var(--pad-x));
@@ -460,7 +523,7 @@ button {
   font-weight: 700;
   letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: #ddb87a;
+  color: #000000;
 }
 
 
@@ -471,8 +534,7 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: clamp(0.875rem, 1.75vw, 1.5rem);
-  margin-inline: calc(var(--pad-x) / -2);
-  /* align-items: stretch (default) — cards in the same row share the same height */
+  padding-inline: var(--pad-x);
 }
 
 
@@ -1075,15 +1137,12 @@ button {
 
 .bio-greeting {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-size: clamp(4.5rem, 13.5vw, 13rem);
   font-weight: 400;
-  line-height: 1.18;
+  line-height: 0.88;
+  letter-spacing: -0.025em;
   color: #ddb87a;
-  background: #000000;
-  width: 100vw;
-  margin-inline: calc(50% - 50vw);
-  padding-block: var(--s4);
-  padding-inline: calc(50vw - 50% + var(--pad-x));
+  margin-bottom: var(--s6);
 }
 
 .bio-inner p {
@@ -1256,3 +1315,130 @@ button {
     transform: none;
   }
 }
+
+/* ============================================================
+   CONTACT MODAL
+   ============================================================ */
+.contact-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.contact-overlay.is-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.contact-panel {
+  background: var(--bg);
+  border-radius: 16px;
+  padding: var(--s7);
+  width: min(480px, 92vw);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.25s ease;
+}
+
+.contact-overlay.is-open .contact-panel {
+  transform: translateY(0);
+}
+
+.contact-close {
+  position: absolute;
+  top: var(--s4);
+  right: var(--s4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--fg-muted);
+  padding: var(--s2);
+  line-height: 1;
+}
+
+.contact-close:hover { color: var(--fg); }
+
+.contact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 400;
+  color: var(--fg);
+  margin-bottom: var(--s6);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s4);
+}
+
+.contact-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--s1);
+  display: block;
+}
+
+.contact-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border-md);
+  border-radius: 8px;
+  padding: var(--s3) var(--s4);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  color: var(--fg);
+  transition: border-color 0.2s;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-color: #ddb87a;
+}
+
+.contact-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-send {
+  align-self: flex-end;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: var(--s3) var(--s6);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contact-send:hover { background: #222; }
+.contact-send:disabled { opacity: 0.7; cursor: not-allowed; }
+
+.contact-send.contact-send-done {
+  background: #22a06b;
+  color: #fff;
+}
+
+.bio-cta {
+  color: #000000;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.bio-cta:hover { opacity: 0.7; }
+[data-theme="dark"] .bio-cta { color: #ffffff; }
