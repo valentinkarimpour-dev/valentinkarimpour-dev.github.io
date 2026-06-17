@@ -102,10 +102,18 @@
         <span class="section-label">Projects Portfolio</span>
       </header>
 
+      <div class="search-bar-wrap">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="search" id="project-search" class="search-input" placeholder="Search by skill, tool or keyword…" autocomplete="off" spellcheck="false" />
+        <button class="search-clear" id="search-clear" aria-label="Clear search" hidden>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
       <div class="project-grid" id="work">
 
         <!-- Card 1, Nike EHQ -->
-        <article class="project-card card-featured card-1 anim-fadeup anim-d3" data-thumb="img/diagram-after-cadence.png">
+        <article class="project-card card-featured card-1 anim-fadeup anim-d3" data-thumb="img/diagram-after-cadence.png" data-keywords="cross-functional coordination, operating model design, campaign execution, retail operations, stakeholder alignment, change management, process standardization, launch readiness, information architecture, organizational efficiency">
           <div class="card-body">
             <p class="card-meta">Nike EHQ &middot; Amsterdam (NL)</p>
             <h2 class="card-title">Designing Nike EMEA's new campaign execution operating model <em>(and securing $25M quarterly revenue)</em></h2>
@@ -114,7 +122,7 @@
         </article>
 
         <!-- Card 2 — Foxintelligence -->
-        <article class="project-card card-medium card-2 anim-fadeup anim-d4" data-thumb="img/leclerc-after.png">
+        <article class="project-card card-medium card-2 anim-fadeup anim-d4" data-thumb="img/leclerc-after.png" data-keywords="data engineering, market intelligence, revenue recovery, client retention, sql analytics, bigquery, big query, fmcg analytics, fmcg, cpg, consumer packaged goods, data quality, statistical inference, b2b saas, b2b, saas, arr growth, arr, annual recurring revenue">
           <div class="card-body">
             <p class="card-meta">Foxintelligence &middot; Paris (FR)</p>
             <h2 class="card-title">Saving the FMCG vertical <em>(and €2M ARR)</em> by reintegrating missing e-retailer's sales data</h2>
@@ -123,7 +131,7 @@
         </article>
 
         <!-- Card 3 — Nike Cyberweek -->
-        <article class="project-card card-3 anim-fadeup anim-d4" data-thumb="img/cyberweek-post.png">
+        <article class="project-card card-3 anim-fadeup anim-d4" data-thumb="img/cyberweek-post.png" data-keywords="campaign analytics, insights strategy, process redesign, cross-functional alignment, analytical governance, stakeholder management, revenue growth, knowledge management, learning agenda, operating rhythm">
           <div class="card-body">
             <p class="card-meta">Nike EHQ &middot; Amsterdam (NL)</p>
             <h2 class="card-title">Fixing Nike's campaign readout process <em>(and driving +20% sales growth the following year)</em></h2>
@@ -132,7 +140,7 @@
         </article>
 
         <!-- Card 4 — Nike Retention -->
-        <article class="project-card card-featured card-4 anim-fadeup anim-d5" data-thumb="img/lifecycle-journeys.png">
+        <article class="project-card card-featured card-4 anim-fadeup anim-d5" data-thumb="img/lifecycle-journeys.png" data-keywords="member retention, cohort analysis, self-serve analytics, self-service analytics, customer lifecycle, digital commerce, e-commerce, ecommerce, a/b testing, ab testing, split testing, experimentation, tableau, data visualization, data viz, bi, business intelligence, segmentation, revenue impact, product analytics">
           <div class="card-body">
             <p class="card-meta">Nike EHQ &middot; Amsterdam (NL)</p>
             <h2 class="card-title">Building a new members' retention framework for Nike <em>(that lifted member repeat purchase by +3pp)</em></h2>
@@ -141,7 +149,7 @@
         </article>
 
         <!-- Card 6 — Foxintelligence Freemium -->
-        <article class="project-card card-6 anim-fadeup anim-d5" data-thumb="">
+        <article class="project-card card-6 anim-fadeup anim-d5" data-thumb="" data-keywords="product-led growth, plg, freemium model, user acquisition, lead generation, conversion optimization, crm automation, crm, customer relationship management, b2b saas, b2b, saas, pipeline building, revenue growth, go-to-market strategy, gtm">
           <div class="card-body">
             <p class="card-meta">Foxintelligence &middot; Paris (FR)</p>
             <h2 class="card-title">Launching Foxintelligence's freemium model <em>(and growing new user acquisition by 40%)</em></h2>
@@ -150,7 +158,7 @@
         </article>
 
         <!-- Card 7 — Nike Analytics Intake -->
-        <article class="project-card card-7 anim-fadeup anim-d5" data-thumb="">
+        <article class="project-card card-7 anim-fadeup anim-d5" data-thumb="" data-keywords="capacity planning, process improvement, prioritization framework, stakeholder management, analytics operations, team productivity, resource allocation, operating model, demand management, organizational effectiveness">
           <div class="card-body">
             <p class="card-meta">Nike EHQ &middot; Amsterdam (NL)</p>
             <h2 class="card-title">Rebuilding Nike's analytics intake process <em>(and increasing team's project delivery rate +20%)</em></h2>
@@ -159,7 +167,7 @@
         </article>
 
         <!-- Card 5 — Le Wagon / Pixel Truth -->
-        <article class="project-card card-small card-5 anim-fadeup anim-d5">
+        <article class="project-card card-small card-5 anim-fadeup anim-d5" data-keywords="deep learning, neural network, neural networks, computer vision, image classification, machine learning, ml, python, tensorflow, tf, keras, mlops, ml ops, ml operations, google cloud platform, gcp, model deployment, ai detection, cnn, convolutional neural network, resnet, resnet50, binary classifier">
           <div class="card-body">
             <p class="card-meta">Le Wagon &middot; Paris (FR)</p>
             <h2 class="card-title">Building a CNN model for AI-generated image detection <em>(reaching 92.7% accuracy)</em></h2>
@@ -177,18 +185,51 @@
       </div>
     </section>
 
+    <section class="links-section">
+      <header class="section-header">
+        <span class="section-label">Useful Links</span>
+      </header>
+      <div class="links-icons">
+
+        <a href="https://www.linkedin.com/in/valentinkarimpour/" target="_blank" rel="noopener noreferrer" class="link-icon-item" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+
+        <a href="https://github.com/valentinkarimpour-dev" target="_blank" rel="noopener noreferrer" class="link-icon-item" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+          </svg>
+          <span>GitHub</span>
+        </a>
+
+        <a href="Valentin_Karimpour_Resume_Sr_Product_Analytics_Manager.pdf" download class="link-icon-item" aria-label="Resume PDF">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="9" y1="13" x2="15" y2="13"/>
+            <line x1="9" y1="17" x2="13" y2="17"/>
+          </svg>
+          <span>Resume</span>
+        </a>
+
+        <button class="link-icon-item" id="links-contact-trigger" aria-label="Contact">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>Contact</span>
+        </button>
+
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer" role="contentinfo">
-    <div class="footer-inner">
-      <p class="footer-quote"><em><!-- FOOTER QUOTE: replace this text --></em></p>
-      <nav class="footer-nav" aria-label="Contact and social links">
-        <a href="#" class="footer-link">LinkedIn</a><!-- placeholder href -->
-        <a href="#" class="footer-link">Resume</a><!-- placeholder href -->
-        <a href="mailto:#" class="footer-link">Email</a><!-- placeholder href -->
-      </nav>
-      <p class="footer-copy">&copy; 2025 Valentin , Paris</p>
-    </div>
+    <p class="footer-copy">&copy; 2025 Valentin Karimpour</p>
   </footer>
 
   <!-- ============================================================
@@ -322,6 +363,7 @@
       <div class="modal-content">
         <p class="modal-meta">Foxintelligence &middot; Paris (FR)</p>
         <h2 class="modal-title" id="modal-fox-title">Saving the FMCG vertical <em>(and €2M ARR)</em> by reintegrating missing e-retailer's sales data</h2>
+        <p class="modal-summary case-italic">Reconstructed missing historical transaction data for France's largest e-retailer using BigQuery, restoring 50% of the FMCG market view and unlocking €2M in incremental ARR.</p>
 
         <div class="modal-divider"></div>
 
@@ -417,6 +459,7 @@
       <div class="modal-content">
         <p class="modal-meta">Nike EHQ &middot; Amsterdam (NL)</p>
         <h2 class="modal-title" id="modal-cyberweek-title">Fixing Nike's campaign readout process <em>(and driving +20% sales growth the following year)</em></h2>
+        <p class="modal-summary case-italic">Redesigned Nike's Cyberweek readout from 100 fragmented slides to 10, building the collaborative process that contributed to +20% sales growth the following year.</p>
 
         <div class="modal-divider"></div>
 
@@ -518,6 +561,7 @@
       <div class="modal-content">
         <p class="modal-meta">Nike EHQ &middot; Amsterdam (NL)</p>
         <h2 class="modal-title" id="modal-retention-title">Building a new members' retention framework for Nike <em>(that lifted member repeat purchase by +3pp)</em></h2>
+        <p class="modal-summary case-italic">Built a cohort framework identifying repeat purchase drivers across Nike EMEA's membership programme, lifting repeat rate by 4pp on the pilot journey and 3pp retention gain company-wide.</p>
 
         <div class="modal-divider"></div>
 
@@ -620,6 +664,7 @@
       <div class="modal-content">
         <p class="modal-meta">Le Wagon &middot; Paris (FR)</p>
         <h2 class="modal-title" id="modal-pixeltruth-title">Building a CNN model for AI-generated image detection <em>(reaching 92.7% accuracy)</em></h2>
+        <p class="modal-summary case-italic">Built and deployed an end-to-end binary classifier distinguishing real from AI-generated images, reaching 92.7% accuracy with a fine-tuned ResNet50 on 60,000 images.</p>
 
         <div class="modal-divider"></div>
 
@@ -836,6 +881,7 @@ pip install -e .</code></pre>
       <div class="modal-content">
         <p class="modal-meta">Foxintelligence &middot; Paris (FR)</p>
         <h2 class="modal-title" id="modal-fox-freemium-title">Launching Foxintelligence's freemium model <em>(and growing new user acquisition by 40%)</em></h2>
+        <p class="modal-summary case-italic">Designed and shipped Foxintelligence's freemium tier end-to-end, building the product experience, lead capture flow, and real-time CRM pipeline that grew new signups by 40% in three months.</p>
 
         <div class="modal-divider"></div>
 
@@ -921,6 +967,7 @@ pip install -e .</code></pre>
       <div class="modal-content">
         <p class="modal-meta">Nike EHQ &middot; Amsterdam (NL)</p>
         <h2 class="modal-title" id="modal-nike-intake-title">Rebuilding Nike's analytics intake process <em>(and increasing team's project delivery rate +20%)</em></h2>
+        <p class="modal-summary case-italic">Built a structured quarterly intake process for Nike's analytics team, restoring delivery reliability and giving the team a defensible framework to prioritize and decline requests.</p>
 
         <div class="modal-divider"></div>
 
@@ -935,6 +982,10 @@ pip install -e .</code></pre>
           <p>There was no structured cadence for qualifying incoming requests, no shared visibility on who was working on what, and no defensible mechanism for prioritization. The team could not say no, not because the work was unimportant, but because there was no framework to make the decision legible to anyone outside the team.</p>
           <p class="case-italic">The goal was to build a process that let the team honour its commitments, and decline requests without it feeling personal.</p>
         </div>
+
+        <div class="modal-divider"></div>
+        <img src="img/nike-intake-1.jpg" alt="Nike intake process" class="case-img" />
+        <div class="modal-divider"></div>
 
         <div class="case-section">
           <h4 class="case-heading">What I built</h4>
@@ -978,6 +1029,10 @@ pip install -e .</code></pre>
 
           </dl>
         </div>
+
+        <div class="modal-divider"></div>
+        <img src="img/nike-intake-2.jpg" alt="Nike intake results" class="case-img" />
+        <div class="modal-divider"></div>
 
         <div class="case-section">
           <h4 class="case-heading">Results</h4>
@@ -1163,9 +1218,11 @@ pip install -e .</code></pre>
   <script>
     // Contact modal
     (function () {
-      const trigger    = document.getElementById('contact-trigger');
-      const bioTrigger = document.getElementById('bio-contact-trigger');
-      if (bioTrigger) bioTrigger.addEventListener('click', openContact);
+      const trigger      = document.getElementById('contact-trigger');
+      const bioTrigger   = document.getElementById('bio-contact-trigger');
+      const linksTrigger = document.getElementById('links-contact-trigger');
+      if (bioTrigger)   bioTrigger.addEventListener('click', openContact);
+      if (linksTrigger) linksTrigger.addEventListener('click', openContact);
       const modal   = document.getElementById('contact-modal');
       const close   = document.getElementById('contact-close');
       const form    = document.getElementById('contact-form');
@@ -1208,20 +1265,28 @@ pip install -e .</code></pre>
     // Scroll-spy: highlight nav link when its section is in view
     (function () {
       const sections = [
-        { el: document.querySelector('.hero'),         link: document.querySelector('.nav-links a[href="#about"]') },
-        { el: document.querySelector('.work-section'), link: document.querySelector('.nav-links a[href="#work"]')  },
+        { el: document.querySelector('.hero'),          links: [document.querySelector('.nav-links a[href="#about"]')] },
+        { el: document.querySelector('.work-section'),  links: [document.querySelector('.nav-links a[href="#work"]')]  },
+        { el: document.querySelector('.links-section'), links: [
+            document.querySelector('.nav-links a[href*="linkedin"]'),
+            document.querySelector('.nav-links a[download]'),
+            document.getElementById('contact-trigger'),
+          ]
+        },
       ];
       function onScroll() {
-        const scrollY = window.scrollY + window.innerHeight * 0.25;
-        sections.forEach(({ el, link }) => {
-          if (!link || !el) return;
-          const top    = el.offsetTop;
-          const bottom = top + el.offsetHeight;
-          if (scrollY >= top && scrollY < bottom) {
-            link.classList.add('nav-active');
+        const scrollY  = window.scrollY + window.innerHeight * 0.25;
+        const atBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+        sections.forEach(({ el, links }, i) => {
+          if (!el) return;
+          const isLast = i === sections.length - 1;
+          let active;
+          if (atBottom) {
+            active = isLast;
           } else {
-            link.classList.remove('nav-active');
+            active = scrollY >= el.offsetTop && scrollY < el.offsetTop + el.offsetHeight;
           }
+          links.forEach(l => l && l.classList.toggle('nav-active', active));
         });
       }
       window.addEventListener('scroll', onScroll, { passive: true });
@@ -1319,6 +1384,69 @@ pip install -e .</code></pre>
         }
       });
     })();
+
+  /* Project search */
+  (function() {
+    const input    = document.getElementById('project-search');
+    const clearBtn = document.getElementById('search-clear');
+    const grid     = document.querySelector('.project-grid');
+    const cards    = Array.from(document.querySelectorAll('.project-card'));
+
+    function norm(s) {
+      return s.toLowerCase().replace(/[-\/]/g, ' ').replace(/\s+/g, ' ').trim();
+    }
+
+    function cardText(card) {
+      const title    = card.querySelector('.card-title')?.textContent || '';
+      const meta     = card.querySelector('.card-meta')?.textContent  || '';
+      const keywords = card.dataset.keywords || '';
+      return norm(title + ' ' + meta + ' ' + keywords);
+    }
+
+    function search(raw) {
+      const q = norm(raw);
+      if (!q) {
+        cards.forEach(c => {
+          c.classList.remove('card-hidden');
+          grid.appendChild(c);
+        });
+      } else {
+        const matching    = cards.filter(c =>  cardText(c).includes(q));
+        const nonMatching = cards.filter(c => !cardText(c).includes(q));
+        matching.forEach(c => {
+          c.classList.remove('card-hidden');
+          grid.appendChild(c);
+        });
+        nonMatching.forEach(c => {
+          c.classList.add('card-hidden');
+        });
+      }
+      setEqualHeights();
+    }
+
+    input.addEventListener('input', () => {
+      const v = input.value.trim();
+      clearBtn.hidden = !v;
+      search(v);
+    });
+
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      clearBtn.hidden = true;
+      search('');
+    });
+  })();
+
+  /* Equalize project card heights to the tallest card */
+  function setEqualHeights() {
+    const cards = document.querySelectorAll('.project-card:not(.card-hidden)');
+    cards.forEach(c => c.style.height = '');
+    let max = 0;
+    cards.forEach(c => { if (c.offsetHeight > max) max = c.offsetHeight; });
+    cards.forEach(c => c.style.height = max + 'px');
+  }
+  setEqualHeights();
+  window.addEventListener('resize', setEqualHeights);
   </script>
 
 </body>
