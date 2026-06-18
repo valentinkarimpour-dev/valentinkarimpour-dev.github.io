@@ -924,6 +924,18 @@ button {
   justify-content: center;
 }
 
+/* Close button tinted to match hero bg for these modals, flush to top */
+#modal-pixeltruth   .modal-close { background: #0b0d2c; border-color: rgba(255,255,255,0.2); color: #ffffff; margin-top: 0; }
+#modal-fox-freemium .modal-close { background: #ffffff; border-color: rgba(0,0,0,0.15); color: #1c1a18; margin-top: 0; }
+
+/* Adjust image pull-up to match removed margin */
+#modal-pixeltruth   .modal-image,
+#modal-fox-freemium .modal-image { margin-top: calc(-40px); }
+
+/* Panel bg matches hero so no colour mismatch; content area gets its own bg */
+#modal-pixeltruth .modal-panel   { background-color: #0b0d2c; }
+#modal-pixeltruth .modal-content { background-color: var(--bg); }
+
 .modal-hero-img {
   display: block;
   width: 100%;
@@ -1319,6 +1331,7 @@ button {
   text-transform: uppercase;
   background: none;
   border: none;
+  outline: none;
   padding: 0;
   cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
@@ -1334,6 +1347,7 @@ button {
   width: 72px;
   height: 72px;
 }
+
 
 /* ============================================================
    FOOTER
