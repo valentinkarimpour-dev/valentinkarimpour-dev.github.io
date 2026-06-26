@@ -957,6 +957,12 @@ button {
   gap: var(--s2);
 }
 
+.xp-media-grid--single {
+  grid-template-columns: 1fr;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
 .xp-media-item {
   display: block;
   width: 100%;
