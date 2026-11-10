@@ -51,7 +51,7 @@
    CUSTOM PROPERTIES
    ============================================================ */
 :root {
-  /* Colors — light mode */
+  /* Colors, light mode */
   --bg:            #f5f2ee;
   --fg:            #1c1a18;
   --fg-muted:      #6b6460;
@@ -341,7 +341,7 @@ button {
 
 
 /* ============================================================
-   ABOUT ME — EXPERIENCE SQUARES
+   ABOUT ME, EXPERIENCE SQUARES
    ============================================================ */
 .xp-section {
   padding: var(--s5) var(--pad-x) var(--s5);
@@ -360,6 +360,7 @@ button {
 
 .xp-item {
   flex: 1;
+  min-width: 0; /* equal squares even when a date label is longer */
   position: relative;
   cursor: pointer;
 }
@@ -528,7 +529,7 @@ button {
 
 
 /* ============================================================
-   PROJECT GRID — 2-column, equal-height rows
+   PROJECT GRID, 2-column, equal-height rows
    ============================================================ */
 /* ============================================================
    SEARCH BAR
@@ -603,7 +604,7 @@ button {
 
 
 /* ============================================================
-   PROJECT CARD — SHARED STYLES
+   PROJECT CARD, SHARED STYLES
    ============================================================ */
 .project-card {
   display: flex;
@@ -630,7 +631,7 @@ button {
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* Card text — white on black by default */
+/* Card text, white on black by default */
 .project-card .card-meta {
   color: rgba(255, 255, 255, 0.62);
   transition: color 0.3s ease;
@@ -647,7 +648,7 @@ button {
   color: #ddb87a;
 }
 
-/* Card text — black on white on hover */
+/* Card text, black on white on hover */
 .project-card:hover .card-meta       { color: #6b6460; }
 .project-card:hover .card-title      { color: #1c1a18; }
 .project-card:hover .card-title em   { color: #9a7a52; }
@@ -761,7 +762,7 @@ button {
   height: clamp(180px, 22vw, 310px);
 }
 
-/* ---- Card 1 — diagonal stripe ---- */
+/* ---- Card 1, diagonal stripe ---- */
 .card-1 .card-image-inner {
   background-color: var(--ph-a);
   background-image: repeating-linear-gradient(
@@ -774,7 +775,7 @@ button {
 }
 
 
-/* ---- Card 2 — warm radial ---- */
+/* ---- Card 2, warm radial ---- */
 .card-2 .card-image-inner {
   background: radial-gradient(
     ellipse at 30% 65%,
@@ -785,7 +786,7 @@ button {
 }
 
 
-/* ---- Card 3 — Text-only editorial ---- */
+/* ---- Card 3, Text-only editorial ---- */
 .card-text {
   background-color: var(--ph-text-bg);
   border-color: transparent;
@@ -810,7 +811,7 @@ button {
 }
 
 
-/* ---- Card 4 — dot grid ---- */
+/* ---- Card 4, dot grid ---- */
 .card-4 .card-image-inner {
   background-color: var(--ph-a);
   background-image: radial-gradient(
@@ -820,7 +821,7 @@ button {
 }
 
 
-/* ---- Card 5 — crosshatch ---- */
+/* ---- Card 5, crosshatch ---- */
 .card-5 .card-image-inner {
   background-color: var(--ph-b);
   background-image:
@@ -1309,6 +1310,37 @@ button {
    FOOTER
    ============================================================ */
 /* ============================================================
+   SKILLS & LANGUAGES
+   ============================================================ */
+.skills-section {
+  padding: 0 0 var(--s8);
+  width: 100%;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--s5) var(--s6);
+  padding-inline: var(--pad-x);
+}
+
+.skills-grid dt {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-muted);
+  margin-bottom: var(--s2);
+}
+
+.skills-grid dd {
+  margin: 0;
+  color: var(--fg);
+  line-height: 1.5;
+}
+
+
+/* ============================================================
    USEFUL LINKS SECTION
    ============================================================ */
 .links-section {
@@ -1369,10 +1401,12 @@ button {
   letter-spacing: 0.05em;
   text-align: center;
 }
+.footer-copy a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.footer-copy a:hover { color: var(--fg); }
 
 
 /* ============================================================
-   RESPONSIVE — TABLET PORTRAIT (≤ 768px)
+   RESPONSIVE, TABLET PORTRAIT (≤ 768px)
    ============================================================ */
 @media (max-width: 768px) {
   :root { --nav-h: 80px; }
@@ -1389,7 +1423,7 @@ button {
 
 
 /* ============================================================
-   RESPONSIVE — MOBILE (≤ 480px)
+   RESPONSIVE, MOBILE (≤ 480px)
    ============================================================ */
 @media (max-width: 480px) {
   .project-grid {
@@ -1552,3 +1586,15 @@ button {
 }
 .bio-cta:hover { opacity: 0.7; }
 [data-theme="dark"] .bio-cta { color: #ffffff; }
+
+.contact-alt {
+  margin-top: var(--s5);
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+}
+.contact-alt a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.contact-alt a:hover { opacity: 0.7; }
