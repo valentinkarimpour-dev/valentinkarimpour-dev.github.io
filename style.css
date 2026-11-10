@@ -367,6 +367,7 @@ button {
 
 .xp-img-wrap {
   position: relative;
+  container-type: inline-size;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 14px;
@@ -405,6 +406,35 @@ button {
   height: 100%;
   object-fit: contain;
   padding: 10%;
+}
+
+/* Word mark for a timeline entry without a logo; inherits the dark-mode invert of .xp-logo */
+.xp-logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-family: 'Host Grotesk', var(--font-sans);
+  font-weight: 700;
+  font-size: 12cqi;
+  letter-spacing: 0.02em;
+}
+
+/* Company logo with its description beside it (timeline modals) */
+.xp-company {
+  display: flex;
+  align-items: center;
+  gap: var(--s5);
+}
+.xp-company-logo { flex: 0 0 auto; }
+.xp-company-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+.xp-company p { margin: 0; }
+@media (max-width: 480px) {
+  .xp-company { flex-direction: column; align-items: flex-start; gap: var(--s3); }
 }
 
 .xp-logo-wide {
